@@ -18,10 +18,10 @@
             <a class="nav-link active" aria-current="page" [routerLink]="['/inicio']">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
+            <a class="nav-link" [routerLink]="['/lista-productos']">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pedidos</a>
+            <a class="nav-link" [routerLink]="['/lista-pedidos']">Pedidos</a>
           </li>
         </ul>
 
@@ -40,8 +40,8 @@
               Nombre Usuario
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Crear Producto</a></li>
-              <li><a class="dropdown-item" href="#">Crear Pedido</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/formulario-producto']">Crear Producto</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/formulario-pedido']">Crear Pedido</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>

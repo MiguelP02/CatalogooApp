@@ -16,6 +16,10 @@ export class ProductService {
     return this.http.get<Producto[]>(this.apiUrl);
   }
 
+  getProducto(id: number): Observable<Producto>{
+    return this.http.get<Producto>(`${this.apiUrl}/${id}`);
+  }
+
   createProducto(producto: Producto): Observable<Producto> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post<Producto>(this.apiUrl, producto, { headers });

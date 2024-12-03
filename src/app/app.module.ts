@@ -11,6 +11,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
     LoginComponent,
     HomeComponent,
     ErrorComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,

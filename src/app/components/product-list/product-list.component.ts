@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 import { Producto } from '../../models/producto';
 
@@ -13,13 +14,24 @@ export class ProductListComponent implements OnInit {
   public productos: Producto[] = [];
   public status: string = '';
 
-  constructor(private productoService: ProductService) {}
+  constructor(
+    private productoService: ProductService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.getProductos();
+    this.loadProductos();
+    //this.getProductos();
   }
 
-  getProductos(): void {
+  loadProductos(){
+    this.productoService.getProductos().subscribe((productos) => {
+      this.productos = productos;
+    });
+  }
+
+
+  /*getProductos(): void {
     this.productoService.getProductos().subscribe(
       (response) => {
         this.productos = response;
@@ -30,9 +42,21 @@ export class ProductListComponent implements OnInit {
         console.error('Error al obtener productos', error);
       }
     );
+  }*/
+
+  
+  editProducto(id: number){
+    this.router.navigate(['/formulario-producto', id]);
   }
 
-  deleteProducto(id: number): void {
+  deleteProducto(id: number){
+    this.productoService.deleteProducto(id).subscribe(() => {
+      this.loadProductos();
+    });
+  }
+
+
+  /*deleteProducto(id: number): void {
     this.productoService.deleteProducto(id).subscribe(
       (response) => {
         this.getProductos(); // Volver a cargar los productos después de eliminar
@@ -42,5 +66,5 @@ export class ProductListComponent implements OnInit {
         console.error('Error al eliminar producto', error);
       }
     );
-  }
+  }*/
 }
