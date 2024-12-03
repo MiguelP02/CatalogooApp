@@ -25,6 +25,7 @@
           </li>
         </ul>
 
+        @if(!identity){
         <ul class="navbar-nav navbar-rigt">
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/login']">Login</a>
@@ -33,12 +34,15 @@
             <a class="nav-link" href="#">Registro</a>
           </li>-->
         </ul>
+      }
 
         <ul class="navbar-nav navbar-rigt">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-              Nombre Usuario
+            @if(identity){
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              {{ identity.nombre + ' ' + identity.role}}
             </a>
+            }
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" [routerLink]="['/formulario-producto']">Crear Producto</a></li>
               <li><a class="dropdown-item" [routerLink]="['/formulario-pedido']">Crear Pedido</a></li>
@@ -47,7 +51,7 @@
               </li>
               <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
               <li><a class="dropdown-item" href="#">Ajustes</a></li>
-              <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/logout/1']">Cerrar Sesión</a></li>
             </ul>
           </li>
         </ul>
