@@ -36,3 +36,11 @@ Este proyecto es una aplicación Angular que permite a los usuarios realizar ped
 ## Conclusiones
 
 Este proyecto es una aplicación Angular que permite a los usuarios realizar pedidos en línea. Para configurar y ejecutar el proyecto, seguir las instrucciones anteriores
+
+
+## Credenciales
+admin@admin.co
+1234
+
+user@user.co
+1234
