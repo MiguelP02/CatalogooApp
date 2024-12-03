@@ -1,59 +1,38 @@
-# CatalogoApp
+# Instrucciones para el proyecto
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+## Introducción
 
-## Development server
+Este proyecto es una aplicación Angular que permite a los usuarios realizar pedidos en línea. A continuación, se presentan las instrucciones para configurar y ejecutar el proyecto.
 
-To start a local development server, run:
+## Requisitos previos
 
-```bash
-ng serve
-```
+* Tener instalado Node.js y npm en el sistema.
+* Tener instalado Angular CLI en el sistema.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Configuración del proyecto
 
-## Code scaffolding
+1. Clonar el repositorio del proyecto utilizando el comando git clone.
+2. Acceder al directorio del proyecto utilizando el comando cd.
+3. Instalar las dependencias del proyecto utilizando el comando npm install.
+4. Configurar las variables de entorno del proyecto según sea necesario.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Ejecución del proyecto
 
-```bash
-ng generate component component-name
-```
+1. Ejecutar el comando ng serve para iniciar el servidor de desarrollo.
+2. Acceder a la aplicación en el navegador mediante la URL http://localhost:4200.
+3. Realizar pedidos en línea utilizando la aplicación.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Instrucciones adicionales
 
-```bash
-ng generate --help
-```
+* Para realizar cambios en el código del proyecto, editar los archivos correspondientes en el directorio src.
+* Para compilar el proyecto, ejecutar el comando ng build.
+* Para desplegar el proyecto en un servidor de producción, seguir las instrucciones del proveedor de hosting.
 
-## Building
+## Solución de problemas
 
-To build the project run:
+* Si se produce un error al ejecutar el comando ng serve, verificar que el puerto 4200 esté disponible.
+* Si se produce un error al acceder a la aplicación en el navegador, verificar que el servidor de desarrollo esté ejecutándose correctamente.
 
-```bash
-ng build
-```
+## Conclusiones
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este proyecto es una aplicación Angular que permite a los usuarios realizar pedidos en línea. Para configurar y ejecutar el proyecto, seguir las instrucciones anteriores.
