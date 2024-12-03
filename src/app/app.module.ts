@@ -10,13 +10,15 @@ import { ErrorComponent } from './components/error/error.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

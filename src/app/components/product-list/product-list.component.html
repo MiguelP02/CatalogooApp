@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Lista de Productos</h1>
+  
+    <div *ngIf="status === 'error'" class="alert alert-danger">
+      Hubo un error al cargar los productos.
+    </div>
+  
+    <div *ngIf="productos.length === 0" class="alert alert-info">
+      No hay productos disponibles.
+    </div>
+  
+    <table *ngIf="productos.length > 0" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.precio | currency }}</td>
+          <td>{{ producto.cantidad }}</td>
+          <td>
+            <button (click)="deleteProducto(producto.id)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  
